@@ -1,0 +1,91 @@
+.footer {
+    margin-top: auto;
+    padding: var(--space-16) 0 var(--space-8);
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.footerMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-8);
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.logoText {
+    color: var(--color-text-primary);
+}
+
+.logoAccent {
+    color: var(--color-accent-primary);
+}
+
+.tagline {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    max-width: 250px;
+}
+
+.footerNav {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.footerNav a {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footerNav a:hover {
+    color: var(--color-accent-primary);
+}
+
+.footerBottom {
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+}
+
+.footerBottom p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footerMain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerNav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tagline {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+.dolor {
+    background: var(--color-bg-secondary);
+}
+
+.header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-12);
+}
+
+.title {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-4);
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+}
+
+.grid {
+    gap: var(--space-6);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.card:hover {
+    transform: none;
+}
+
+.cardIcon {
+    font-size: var(--font-size-4xl);
+}
+
+.cardTitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-dolor);
+}
+
+.cardDescription {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
