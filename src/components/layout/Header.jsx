@@ -1,38 +1,67 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import styles from './Header.module.css'
 
-function Header() {
-    const location = useLocation()
+const navLinks = [
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#casos', label: 'Casos' },
+    { href: '#quien-soy', label: 'Quién soy' },
+]
 
-    const navLinks = [
-        { path: '/', label: 'Inicio' },
-        { path: '/como-funciona', label: 'Cómo funciona' },
-        { path: '/casos', label: 'Casos' },
-    ]
+function Header() {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    useEffect(() => {
+        document.body.style.overflow = menuOpen ? 'hidden' : ''
+        return () => { document.body.style.overflow = '' }
+    }, [menuOpen])
+
+    function handleNavClick() {
+        setMenuOpen(false)
+    }
 
     return (
         <header className={styles.header}>
             <div className={`container ${styles.headerContainer}`}>
-                <Link to="/" className={styles.logo}>
+                <a href="#inicio" className={styles.logo} onClick={handleNavClick} aria-label="AndusChile — ir al inicio">
                     <span className={styles.logoText}>Andus</span>
                     <span className={styles.logoAccent}>Chile</span>
-                </Link>
+                </a>
 
-                <nav className={styles.nav}>
+                <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
                     {navLinks.map(link => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={`${styles.navLink} ${location.pathname === link.path ? styles.active : ''}`}
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            className={styles.navLink}
+                            onClick={handleNavClick}
                         >
                             {link.label}
-                        </Link>
+                        </a>
                     ))}
+                    <a
+                        href="#contacto"
+                        className={`btn btn--primary ${styles.ctaMobile}`}
+                        onClick={handleNavClick}
+                    >
+                        Conversemos
+                    </a>
                 </nav>
 
-                <Link to="/empezar" className="btn btn--primary">
-                    Empezar
-                </Link>
+                <a href="#contacto" className={`btn btn--primary ${styles.cta}`}>
+                    Conversemos
+                </a>
+
+                <button
+                    type="button"
+                    className={styles.menuToggle}
+                    onClick={() => setMenuOpen(prev => !prev)}
+                    aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                    aria-expanded={menuOpen}
+                >
+                    <span className={`${styles.menuBar} ${menuOpen ? styles.menuBarOpen1 : ''}`} />
+                    <span className={`${styles.menuBar} ${menuOpen ? styles.menuBarOpen2 : ''}`} />
+                    <span className={`${styles.menuBar} ${menuOpen ? styles.menuBarOpen3 : ''}`} />
+                </button>
             </div>
         </header>
     )

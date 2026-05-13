@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
 
 function Footer() {
@@ -9,25 +8,43 @@ function Footer() {
             <div className={`container ${styles.footerContainer}`}>
                 <div className={styles.footerMain}>
                     <div className={styles.footerBrand}>
-                        <Link to="/" className={styles.logo}>
+                        <a href="#inicio" className={styles.logo} aria-label="AndusChile — ir al inicio">
                             <span className={styles.logoText}>Andus</span>
                             <span className={styles.logoAccent}>Chile</span>
-                        </Link>
+                        </a>
                         <p className={styles.tagline}>
-                            Infraestructura digital que te devuelve el tiempo.
+                            Soluciones digitales para municipios, alojamientos
+                            y negocios locales.
                         </p>
                     </div>
 
-                    <nav className={styles.footerNav}>
-                        <Link to="/">Inicio</Link>
-                        <Link to="/como-funciona">Cómo funciona</Link>
-                        <Link to="/casos">Casos</Link>
-                        <Link to="/empezar">Empezar</Link>
-                    </nav>
+                    <div className={styles.footerColumns}>
+                        <div className={styles.footerColumn}>
+                            <h4 className={styles.columnTitle}>Sitio</h4>
+                            <nav className={styles.footerNav}>
+                                <a href="#servicios">Servicios</a>
+                                <a href="#casos">Casos</a>
+                                <a href="#quien-soy">Quién soy</a>
+                                <a href="#contacto">Contacto</a>
+                            </nav>
+                        </div>
+
+                        <div className={styles.footerColumn}>
+                            <h4 className={styles.columnTitle}>Contacto</h4>
+                            <nav className={styles.footerNav}>
+                                <a href="https://wa.me/56974283404" target="_blank" rel="noopener noreferrer">
+                                    +56 9 7428 3404
+                                </a>
+                                <a href="mailto:joseurra@anduschile.com">
+                                    joseurra@anduschile.com
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>© {currentYear} AndusChile. Todos los derechos reservados.</p>
+                    <p>© {currentYear} AndusChile · José Urra · Puerto Natales, Chile</p>
                 </div>
             </div>
         </footer>
