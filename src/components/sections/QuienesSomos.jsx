@@ -35,8 +35,12 @@ function QuienesSomos() {
                     <header className={styles.sectionHeader}>
                         <span className={styles.eyebrow}>Quiénes somos</span>
                         <p className={styles.teamLinks}>
-                            <a href={`#${equipo.jose.id}`}>José Urra · Fundador y Director</a>
-                            <a href={`#${equipo.jesseline.id}`}>Jesseline Mardones Fierro · Coordinadora de Recursos Humanos</a>
+                            <a href={`#${equipo.jose.id}`}>
+                                <span>José Urra</span><span className={styles.sep}> · </span><span>Fundador y Director</span>
+                            </a>
+                            <a href={`#${equipo.jesseline.id}`}>
+                                <span>Jesseline Mardones Fierro</span><span className={styles.sep}> · </span><span>Coordinadora de Recursos Humanos</span>
+                            </a>
                         </p>
                         <h2 className={styles.title}>23 años aprendiendo cómo funcionan los territorios.</h2>
                     </header>

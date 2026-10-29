@@ -33,7 +33,7 @@ async function submitContactForm(data) {
         } catch { /* respuesta sin JSON */ }
         throw new Error(
             detalle ||
-            'No pudimos enviar tu mensaje. Intenta de nuevo o escríbeme por WhatsApp.'
+            'No pudimos enviar tu mensaje. Intenta de nuevo o escríbenos por WhatsApp.'
         )
     }
 
@@ -111,7 +111,7 @@ function FormContacto() {
                     </svg>
                 </div>
                 <h3>Mensaje recibido</h3>
-                <p>Te respondo dentro de 24 horas hábiles. Si es urgente, escríbeme por WhatsApp.</p>
+                <p>Te respondemos dentro de 24 horas hábiles. Si es urgente, escríbenos por WhatsApp.</p>
             </div>
         )
     }

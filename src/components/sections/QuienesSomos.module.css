@@ -206,6 +206,14 @@
         align-self: flex-start;
     }
 
+    .teamLinks a span {
+        display: block;
+    }
+
+    .teamLinks .sep {
+        display: none;
+    }
+
     .teamLinks a + a::before {
         content: none;
     }

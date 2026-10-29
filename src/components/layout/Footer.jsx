@@ -44,7 +44,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>© {currentYear} AndusChile · José Urra · Puerto Natales, Chile</p>
+                    <p>© {currentYear} AndusChile · Puerto Natales, Chile</p>
                 </div>
             </div>
         </footer>
