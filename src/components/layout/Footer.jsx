@@ -24,7 +24,7 @@ function Footer() {
                             <nav className={styles.footerNav}>
                                 <a href="#servicios">Servicios</a>
                                 <a href="#casos">Casos</a>
-                                <a href="#quien-soy">Quién soy</a>
+                                <a href="#quienes-somos">Quiénes somos</a>
                                 <a href="#contacto">Contacto</a>
                             </nav>
                         </div>
@@ -44,7 +44,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>© {currentYear} AndusChile · José Urra · Puerto Natales, Chile</p>
+                    <p>© {currentYear} AndusChile · Puerto Natales, Chile</p>
                 </div>
             </div>
         </footer>

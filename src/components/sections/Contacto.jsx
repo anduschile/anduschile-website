@@ -60,8 +60,8 @@ function Contacto() {
                     </div>
 
                     <div className={styles.formCard}>
-                        <h3 className={styles.formTitle}>O escríbeme por aquí</h3>
-                        <p className={styles.formNote}>Te respondo dentro de 24 horas hábiles.</p>
+                        <h3 className={styles.formTitle}>O escríbenos por aquí</h3>
+                        <p className={styles.formNote}>Te respondemos dentro de 24 horas hábiles.</p>
                         <FormContacto />
                     </div>
                 </div>
