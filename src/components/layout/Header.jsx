@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 const navLinks = [
     { href: '#servicios', label: 'Servicios' },
     { href: '#casos', label: 'Casos' },
-    { href: '#quien-soy', label: 'Quién soy' },
+    { href: '#quienes-somos', label: 'Quiénes somos' },
 ]
 
 function Header() {

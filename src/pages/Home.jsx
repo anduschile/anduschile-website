@@ -1,7 +1,7 @@
 import Hero from '../components/sections/Hero'
 import Servicios from '../components/sections/Servicios'
 import CasosReferencia from '../components/sections/CasosReferencia'
-import QuienSoy from '../components/sections/QuienSoy'
+import QuienesSomos from '../components/sections/QuienesSomos'
 import Contacto from '../components/sections/Contacto'
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
             <Hero />
             <Servicios />
             <CasosReferencia />
-            <QuienSoy />
+            <QuienesSomos />
             <Contacto />
         </>
     )
