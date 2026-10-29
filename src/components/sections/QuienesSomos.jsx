@@ -1,5 +1,32 @@
 import styles from './QuienesSomos.module.css'
 
+// Para mostrar una foto, reemplazar null por la ruta, por ejemplo '/equipo/jose-urra.jpg'
+// (archivo en public/equipo/). Con null no se renderiza nada.
+const equipo = {
+    jose: { id: 'jose-urra', nombre: 'José Urra', cargo: 'Fundador y Director', foto: null },
+    jesseline: { id: 'jesseline-mardones', nombre: 'Jesseline Mardones Fierro', cargo: 'Coordinadora de Recursos Humanos', foto: null },
+}
+
+function PersonHeader({ persona, titleId, extraClass = '' }) {
+    return (
+        <header className={`${styles.personHeader} ${extraClass}`}>
+            {persona.foto && (
+                <img
+                    src={persona.foto}
+                    alt={`Retrato de ${persona.nombre}`}
+                    className={styles.photo}
+                    width="96"
+                    height="96"
+                />
+            )}
+            <div className={styles.personTitles}>
+                <span className={styles.role}>{persona.cargo}</span>
+                <h3 id={titleId} className={styles.personName}>{persona.nombre}</h3>
+            </div>
+        </header>
+    )
+}
+
 function QuienesSomos() {
     return (
         <section id="quienes-somos" className={`section ${styles.quienesSomos}`}>
@@ -7,13 +34,15 @@ function QuienesSomos() {
                 <div className={styles.wrapper}>
                     <header className={styles.sectionHeader}>
                         <span className={styles.eyebrow}>Quiénes somos</span>
+                        <p className={styles.teamLinks}>
+                            <a href={`#${equipo.jose.id}`}>José Urra · Fundador y Director</a>
+                            <a href={`#${equipo.jesseline.id}`}>Jesseline Mardones Fierro · Coordinadora de Recursos Humanos</a>
+                        </p>
                         <h2 className={styles.title}>23 años aprendiendo cómo funcionan los territorios.</h2>
                     </header>
 
-                    <header className={`${styles.personHeader} ${styles.founderHeader}`}>
-                        <span className={styles.role}>Fundador y Director</span>
-                        <h3 className={styles.personName}>José Urra</h3>
-                    </header>
+                    <article id={equipo.jose.id} className={styles.founder} aria-labelledby="persona-jose">
+                    <PersonHeader persona={equipo.jose} titleId="persona-jose" extraClass={styles.founderHeader} />
 
                     <div className={styles.bodyWrapper}>
                         <p className={styles.body}>
@@ -45,12 +74,10 @@ function QuienesSomos() {
                             <span className={styles.statLabel}>cada cliente, cada<br />proyecto, cada flujo</span>
                         </li>
                     </ul>
+                    </article>
 
-                    <article className={styles.person} aria-labelledby="persona-jesseline">
-                        <header className={styles.personHeader}>
-                            <span className={styles.role}>Coordinadora de Recursos Humanos</span>
-                            <h3 id="persona-jesseline" className={styles.personName}>Jesseline Mardones Fierro</h3>
-                        </header>
+                    <article id={equipo.jesseline.id} className={styles.person} aria-labelledby="persona-jesseline">
+                        <PersonHeader persona={equipo.jesseline} titleId="persona-jesseline" />
 
                         <p className={styles.body}>
                             Coordina la gestión de personas de AndusChile, desde la selección y la

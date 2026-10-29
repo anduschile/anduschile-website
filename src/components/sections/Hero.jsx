@@ -12,7 +12,7 @@ function Hero() {
                 </h1>
 
                 <p className={styles.subheadline}>
-                    AndusChile es el trabajo de <strong>José Urra</strong>, con 23 años
+                    AndusChile nace del trabajo de <strong>José Urra</strong>, con 23 años
                     de experiencia en gestión pública territorial. Construimos sistemas
                     que funcionan para la realidad de cada cliente, no al revés.
                 </p>

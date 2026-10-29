@@ -22,6 +22,58 @@
     color: var(--color-accent-primary);
 }
 
+.teamLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) 0;
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.teamLinks a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.teamLinks a:hover {
+    color: var(--color-accent-primary);
+    border-bottom-color: var(--color-accent-primary);
+}
+
+.teamLinks a:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+}
+
+.teamLinks a + a::before {
+    content: '|';
+    display: inline-block;
+    margin: 0 var(--space-4);
+    color: var(--color-border);
+}
+
+.founder,
+.person {
+    scroll-margin-top: calc(var(--header-height) + var(--space-6));
+}
+
+.photo {
+    flex: none;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.personTitles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
 .title {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
@@ -90,8 +142,8 @@
 
 .personHeader {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
+    align-items: center;
+    gap: var(--space-5);
 }
 
 .founderHeader {
@@ -145,6 +197,19 @@
 }
 
 @media (max-width: 768px) {
+    .teamLinks {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    .teamLinks a {
+        align-self: flex-start;
+    }
+
+    .teamLinks a + a::before {
+        content: none;
+    }
+
     .stats {
         grid-template-columns: 1fr;
         gap: var(--space-5);
