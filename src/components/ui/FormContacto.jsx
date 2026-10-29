@@ -39,7 +39,7 @@ async function submitContactForm(data) {
 
     return {
         success: true,
-        message: 'Recibido. Te respondo dentro de 24 horas hábiles.'
+        message: 'Recibido. Te respondemos dentro de 24 horas hábiles.'
     }
 }
 
