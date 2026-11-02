@@ -84,18 +84,21 @@ function QuienesSomos() {
                         <PersonHeader persona={equipo.jesseline} titleId="persona-jesseline" />
 
                         <p className={styles.body}>
-                            Coordina la gestión de personas de AndusChile, desde la selección y la
-                            incorporación de colaboradores hasta los indicadores que permiten tomar
-                            decisiones sobre el equipo.
+                            Más de 12 años de experiencia en gestión de personas, con foco en
+                            desarrollo organizacional y en reclutamiento y selección. Su trayectoria
+                            incluye procesos de remuneración, control de asistencia digital,
+                            evaluación de desempeño y bienestar organizacional en los sectores
+                            público y privado, con un sólido dominio de la legislación laboral y
+                            previsional chilena.
                         </p>
 
                         <ul className={styles.functions}>
-                            <li>Brinda soporte en materias laborales y de recursos humanos a los equipos y colaboradores.</li>
-                            <li>Gestiona la contratación, los contratos, anexos y la documentación laboral.</li>
+                            <li>Apoya el levantamiento de necesidades de capacitación y coordina las actividades formativas con SENCE y OTIC.</li>
+                            <li>Elabora indicadores y reportes de gestión de personas para las jefaturas.</li>
+                            <li>Brinda soporte consultivo a jefaturas y equipos internos en materias de legislación laboral.</li>
                             <li>Ejecuta procesos de reclutamiento y selección, con entrevistas por competencias y evaluación de candidatos.</li>
-                            <li>Coordina el onboarding y la inducción de nuevos colaboradores.</li>
-                            <li>Levanta necesidades de capacitación y coordina las actividades formativas.</li>
-                            <li>Elabora indicadores y reportes de gestión de personas.</li>
+                            <li>Coordina procesos de evaluación de desempeño y otros procesos de desarrollo de personas.</li>
+                            <li>Gestiona la contratación: contratos, anexos y finiquitos.</li>
                         </ul>
 
                         <p className={styles.body}>
